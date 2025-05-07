@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrien Hogrel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Écriture</a></li>
+          <li><a href="#">Coaching</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- En-tête du site -->
+    <header>
+        <h1>Adrien Hogrel</h1>
+        <h2>Mon produit ? Vous aider à améliorer le vôtre</h2>
+        <p>Salut !</p>
+        <p>Je suis product manager et écrivain – bizarre, pas vrai ? 
+            Mais pas de panique ! C’est dans cette intersection que je trouve mon équilibre. </p>
+        <p>Ma créativité et ma rigueur analytique s’enrichissent mutuellement, 
+            pour vous proposer un accompagnement unique dans vos projets. Envie d’en discuter ? </p>
+    </header>
+    <!-- Section principale avec les trois chemins -->
+    <section class="main-content" id="services">
+        <h2>Mes services</h2>
+        <div class="paths-container">
+            <!-- Product management card -->
+            <div class="path" onclick="toggleContent('product')">
+                <h2>Product Management & UX</h2>
+                <p>Concevoir, tester, livrer des produits utiles et élégants.</p>
+                <div class="path-content" id="product">
+                    <p>🌱 Espace Ressources : articles, cas d'études, prototypes</p>
+                    <p>📩 Un projet : contactez-moi pour un accompagnement produit</p>
+                </div>
+            </div>
+
+            <!-- Writing card -->
+            <div class="path" onclick="toggleContent('writing')">
+                <h2>Copy-writing & rédaction technique</h2>
+                <p>Copy-writer certifié, rendons vos contenus plus impactants !</p>
+                <div class="path-content" id="writing">
+                    <p>🌱 Espace Ressources : articles, cas d'études, prototypes</p>
+                    <p>📩 Un projet : contactez-moi pour un besoin de rédaction</p>
+                </div>
+            </div> 
+           
+            <!-- Reading card -->
+            <div class="path" onclick="toggleContent('reading')">
+                <h2>Accompagnement littéraire</h2>
+                <p>Je relis vos manuscrits et vous accompagne jusqu'à votre envoi aux éditeurs.</p>
+                <div class="path-content" id="reading">
+                    <p>🌱 Espace Ressources : articles, cas d'études, prototypes</p>
+                    <p>📩 Un projet : contactez-moi pour un besoin d'accompagnement littéraire</p>
+                </div>
+            </div>      
+        </div>
+    </section>
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2025 Adrien Hogrel</p>
+    </footer>
+
+    <!-- Script pour le toggle des contenus -->
+    <script>
+        const paths = document.querySelectorAll('.path');
+      
+        paths.forEach(path => {
+          path.addEventListener('click', () => {
+            paths.forEach(p => {
+              if (p !== path) p.classList.remove('open');
+            });
+            path.classList.toggle('open');
+          });
+        });
+    </script>
+            
+</body>
+</html>
